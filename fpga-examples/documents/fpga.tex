@@ -1,0 +1,160 @@
+% #######################################
+% ########### FILL THESE IN #############
+% #######################################
+\def\mytitle{Arm Assignment}
+\def\mykeywords{}
+\def\myauthor{P.Sravan kumar}
+\def\contact{sravankumar912126@gmail.com}
+\def\mymodule{Future Wireless Communications-(FWC22043)}
+% #######################################
+% #### YOU DON'T NEED TO TOUCH BELOW ####
+% #######################################
+\documentclass[10pt, a4paper]{article}
+\usepackage[a4paper,outer=1.5cm,inner=1.5cm,top=1.75cm,bottom=1.5cm]{geometry}
+\twocolumn
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+%colour our links, remove weird boxes
+\usepackage[colorlinks,linkcolor={black},citecolor={blue!80!black},urlcolor={blue!80!black}]{hyperref}
+%Stop indentation on new paragraphs
+\usepackage[parfill]{parskip}
+%% Arial-like font
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+%Napier logo top right
+\usepackage{watermark}
+%Lorem Ipusm dolor please don't leave any in you final report ;)
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{listings}
+%give us the Capital H that we all know and love
+\usepackage{float}
+%tone down the line spacing after section titles
+\usepackage{titlesec}
+%Cool maths printing
+\usepackage{amsmath}
+%PseudoCode
+\usepackage{algorithm2e}
+
+\titlespacing{\subsection}{0pt}{\parskip}{-3pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\paragraph}{0pt}{\parskip}{\parskip}
+\newcommand{\figuremacro}[5]{
+    \begin{figure}[#1]
+        \centering
+        \includegraphics[width=#5\columnwidth]{#2}
+        \caption[#3]{\textbf{#3}#4}
+        \label{fig:#2}
+    \end{figure}
+}
+
+\lstset{
+  frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+
+\title{\mytitle}
+\author{\myauthor\hspace{1em}\\\contact\\IITH\hspace{0.5em}-\hspace{0.5em}\mymodule}
+\date{}
+\hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle,pdfkeywords=\mykeywords}
+\sloppy
+% #######################################
+% ########### START FROM HERE ###########
+% #######################################
+\begin{document}
+  \maketitle
+\tableofcontents
+
+\section{Introduction}
+
+There are different type of boolean algebra rules to simplify the boolean expression.One of the important law is distributive law.This can be stated as follows:
+         A.(B+C)=A.B+A.C (OR distributive law).
+         A+(B.C)=(A+B).(A+C) (AND distributive law).
+
+
+\section{Method to solve}
+
+
+To prove distributive law I used 3 lED's for LHS(A.(B+C)), RHS((A+B).(A+C)) and for condition of LHS=RHS.
+
+
+
+
+\section{Components}
+
+\begin{table}[htbp]
+ \begin{center}
+    \begin{tabular}{|l|c|c|c|c|c|c} \hline \textbf{Component}
+  & \textbf{value} & \textbf{quantity} \\
+ \hline
+Resistor & 220 ohm & 1 \\ \hline
+Arduino & UNO & 1 \\ \hline
+LED &  & 3 \\ \hline
+Bread board &  & 1 \\ \hline
+Jumper wires & M-M & 20\\ \hline
+\end{tabular}   
+\end{center}
+\caption{\label{table:dummytable} }
+\end{table}
+
+
+\section{Distributive law proof with truth table}
+\vspace*{16mm}
+.
+
+\begin{table}[htbp]
+ \begin{center}
+    \begin{tabular}{|l|c|c|c|c|c|c|c|c} \hline \textbf{A}
+  & \textbf{B} & \textbf{C} & \textbf{x(LHS)}& \textbf{y(RHS)} \\
+ \hline
+0&0&0&0&0 \\ \hline
+0&0&1&0&0 \\ \hline
+0&1&0&0&0\\ \hline
+0&1&1&0&0  \\ \hline
+1&0&0&0&0 \\ \hline
+1&0&1&1&1\\ \hline
+1&1&0&1&1\\ \hline
+1&1&1&1&1\\ \hline
+\end{tabular}   
+\end{center}
+\caption{\label{table:dummytable} }
+\end{table}
+
+
+
+
+
+
+
+\section{Connections}
+
+Make connections to the LED's and Vamanboard based on table3 and figure1.
+\begin{table}[htbp]
+ \begin{center}
+    \begin{tabular}{|l|c|c|c|c|c|c|c|c} \hline \textbf{Vaman Pins}
+  & \textbf{4} & \textbf{5} & \textbf{7}& \textbf{GND}\\
+ \hline
+LED&LED1+&LED2+&LED3+&-ve of 3 LED's\\ \hline
+
+\end{tabular}   
+\end{center}
+\caption{\label{table:dummytable} }
+\end{table}
+
+
+
+
+\section{Conclusion}
+The output of LED3  is 1 for all possible inputs.So LHS=RHS i.e  A.(B+C)=A.B+A.C hence distributive law verfied.
+
+code link :
+ \begin{lstlisting}
+    https://github.com/Sravan24365/iith-fwc/blob/main/fpga-examples/blink/helloworldfpga.v
+\end{lstlisting}
+
+
+
+\end{document}
+
